@@ -12,6 +12,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Admin extends JFrame {
 
@@ -51,6 +53,22 @@ public class Admin extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Sign in");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Home hm = new Home();
+				hm.setVisible(true);
+				this.setVisible(true);
+				this.setVisible(false);
+				hm.setLocationRelativeTo(null);
+				 dispose();
+				
+			}
+
+			private void setVisible(boolean b) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnNewButton.setBounds(306, 488, 117, 45);
